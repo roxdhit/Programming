@@ -1,6 +1,6 @@
 package Numbers;
 
-public class ArmstrongNumber {
+public class ArmstrongNoFrom1to10000 {
 	public static int count_digit(int num) {
 		int count = 0;
 		while(num != 0) {
@@ -21,15 +21,16 @@ public class ArmstrongNumber {
 		return res;
 	}
 	public static void main(String[] args) {
-		int num = 153;
-		int res = arm(num);
+		
+		for(int i = 1; i <= 10000; i++) {
+			int num = i;
+			int res = arm(num);
+	
 		if(num == res) {
-			System.out.println("arm");
-		}
-		else {
-			System.out.println("not");
-		}
+			System.out.println("armstrong" +num);
 
 	}
-
+		}
+	}
 }
+	

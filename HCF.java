@@ -1,31 +1,23 @@
-package Recursion;
+package Numbers;
 
 public class HCF {
-	public static void euclid(int a, int b) {
-		while(a != b) {
-		if(a>b) {
-			a = a - b;
-		}
-		else {
-			b = b - a;
-		}
-	}
-	System.out.println(a);
-}
+
 	public static void main(String[] args) {
-		//O(max(a, b))
-		int a  = 25;
-		int b = 245;
-		euclid(a, b);
+		// TODO Auto-generated method stub
+		int a = 12;
+		int b = 36;
+		int hcf =1;
+		int smallest = (a<b)?a:b;
+		for(int i = 1 ; i <= smallest; i++) {
+			if(a %i == 0 && b%i ==0) {
+				hcf = i;
+			}
+			
+		}
+		
 
+		System.out.println(hcf);
 	}
 
 }
-
-
-//worst case time complexity:
-//a = 100;
-//b = 1;
-//time complexity : O(max(a, b))
-// logic: replace max value with max  - min value till both no becomes same
 	
